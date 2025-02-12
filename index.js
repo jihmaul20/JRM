@@ -57,4 +57,14 @@ document.addEventListener("DOMContentLoaded", function() {
             aboutText.innerText = "Passionate website designer focused on creating user-friendly and visually appealing interfaces. Experienced in front-end development and modern UI/UX principles.";
         }
     });
+
+    document.querySelector(".checkout-button").addEventListener("click", function(event) {
+        event.preventDefault();
+        window.open("http://lynk.id/jrm/DJY5eZZ/checkout", "_parent");
+    });
+
+    // Smooth scroll to content when arrow is clicked
+    document.querySelector(".scroll-down-arrow").addEventListener("click", function() {
+        document.querySelector(".profile-container").scrollIntoView({ behavior: "smooth" });
+    });
 });
