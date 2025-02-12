@@ -67,4 +67,25 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".scroll-down-arrow").addEventListener("click", function() {
         document.querySelector(".profile-container").scrollIntoView({ behavior: "smooth" });
     });
+
+    // Image preview modal functionality
+    let modal = document.getElementById("imageModal");
+    let img = document.querySelector(".profile-pic");
+    let modalImg = document.getElementById("modalImg");
+    let closeBtn = document.querySelector(".close");
+    
+    img.addEventListener("click", function() {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+    });
+    
+    closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 });
