@@ -1,258 +1,65 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #0a2a5e;
-    overflow-y: auto;
-    position: relative;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Designer Profile</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="jihan.jpg">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="profile-wrapper">
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="jihan.jpg" alt="Profile Picture" class="profile-pic">
+                <h1 class="profile-name">Jihan Rizky Maulidina</h1>
+                <p class="profile-title">Website Designer & UI/UX Specialist</p>
+            </div>
+            <div class="profile-content">
+                <div class="profile-section">
+                    <h2>About Me</h2>
+                    <p id="about-text">Passionate website designer focused on creating user-friendly and visually appealing interfaces. Experienced in front-end development and modern UI/UX principles.</p>
+                    <button id="translate-btn">Translate to Bahasa Indonesia</button>
+                </div>
+                
+                <div class="profile-section">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>Email: <a href="mailto:jihanmaulidina20@gmail.com">jihanmaulidina20@gmail.com</a></li>
+                        <li>Phone: <a href="https://wa.me/+62895342600742" target="_parent">WhatsApp</a></li>
+                    </ul>
+                </div>
 
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
+                <div class="profile-section checkout">
+                    <h2>Anda Butuh Website? Mari, Saya Bantu ^^</h2>
+                    <P>Anda bisa bertanya-tanya dulu melalui Contact yang tertera ^^</P>
+                    <p>Atau Anda percaya pada saya dan siap booking ^^</p>
+                    <a href="http://lynk.id/jrm/DJY5eZZ/checkout" target="_parent" class="checkout-button">Click This</a>
+                </div>
+                <div class="profile-section">
+                    <h2>Client Group</h2>
+                    <ul>
+                        <li>Group: <a href="https://t.me/+lyoruh3g4dQ2ZWU9">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="scroll-down-arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-.profile-wrapper {
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding-top: 20px;
-}
-
-.profile-container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.profile-header {
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    position: relative;
-    margin: 0 auto;
-    display: block;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.profile-pic:hover {
-    transform: scale(1.05);
-}
-
-/* Modal for Image Preview */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.profile-name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.profile-title {
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-.profile-content {
-    text-align: center;
-    padding: 10px;
-}
-
-.profile-section {
-    margin-bottom: 20px;
-    text-align: left; /* Pastikan semua konten di dalamnya rata kiri */
-}
-
-.profile-section h2 {
-    font-size: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-.profile-section p {
-    text-align: left;
-}
-
-.profile-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.profile-section li {
-    margin: 5px 0;
-    text-align: left;
-}
-
-.profile-section a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.profile-section a:hover {
-    text-decoration: underline;
-}
-
-#translate-btn {
-    margin-top: 10px;
-    padding: 8px 15px;
-    border: none;
-    background: #ff9800;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    display: inline-block; /* Mengubah tombol agar tidak mengambil lebar penuh */
-    text-align: left; /* Memastikan teks di dalam tombol rata kiri */
-}
-
-#translate-btn:hover {
-    background: #e68900;
-}
-
-.checkout {
-    text-align: center;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-}
-
-.checkout-button {
-    display: inline-block;
-    background: #ff9800;
-    color: white;
-    padding: 10px 18px;
-    font-size: 14px;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease;
-}
-
-.checkout-button:hover {
-    background: #e68900;
-}
-
-/* Scroll Down Arrow */
-.scroll-down-arrow {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000;
-}
-
-.scroll-down-arrow span {
-    width: 20px;
-    height: 20px;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: scroll-down 1.5s infinite;
-}
-
-.scroll-down-arrow span:nth-child(2) {
-    animation-delay: -0.2s;
-}
-
-.scroll-down-arrow span:nth-child(3) {
-    animation-delay: -0.4s;
-}
-
-@keyframes scroll-down {
-    0% {
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .profile-container {
-        padding: 15px;
-    }
-    .profile-pic {
-        width: 80px;
-        height: 80px;
-    }
-    .profile-name {
-        font-size: 18px;
-        margin-top: 15px;
-    }
-    .profile-title {
-        font-size: 13px;
-    }
-    .profile-section h2 {
-        font-size: 14px;
-    }
-    .checkout-button {
-        padding: 8px 16px;
-        font-size: 13px;
-    }
-    .scroll-down-arrow {
-        display: flex;
-    }
-}
+    <!-- Modal for Image Preview -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
