@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelector(".checkout-button").addEventListener("click", function(event) {
         event.preventDefault();
-        window.open("http://lynk.id/jrm/DJY5eZZ/checkout", "_parent");
+        window.open("https://lynk.id/jrm", "_parent");
     });
 
     // Smooth scroll to content when arrow is clicked
